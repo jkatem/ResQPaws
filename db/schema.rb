@@ -10,17 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_19_195001) do
+ActiveRecord::Schema.define(version: 2021_02_25_040448) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.text "story"
+    t.string "story"
+    t.string "img"
     t.integer "items_needed"
     t.integer "donations_received"
     t.integer "organization_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "donations_requested"
     t.index ["organization_id"], name: "index_dogs_on_organization_id"
   end
 

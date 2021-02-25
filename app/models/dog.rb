@@ -1,4 +1,6 @@
 class Dog < ApplicationRecord
-  belongs_to :organization, inverse_of: :dogs
-  # validates :name, :location, :story, :items_needed, :donations_received, :organization_id
+  belongs_to :organization
+  # has_one :donations_received
+  # has_one :items_needed
+  # has_one_attached :image
 end

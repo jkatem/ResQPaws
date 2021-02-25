@@ -33,9 +33,9 @@ class Api::V1::DogsController < ApplicationController
   end
 
   # DELETE /dogs/1
-  def destroy
-    @dog.destroy
-  end
+  # def destroy
+  #   @dog.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -45,6 +45,6 @@ class Api::V1::DogsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def dog_params
-      params.require(:dog).permit(:name, :location, :story, :items_needed, :donations_received, organization_id: [])
+      params.require(:dog).permit(:name, :location, :story, :items_needed, :donations_received, :donations_requested, :img, organization_id: [])
     end
 end

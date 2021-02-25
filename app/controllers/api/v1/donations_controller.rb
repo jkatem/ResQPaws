@@ -34,9 +34,9 @@ class Api::V1::DonationsController < ApplicationController
   end
 
   # DELETE /donations/1
-  def destroy
-    @donation.destroy
-  end
+  # def destroy
+  #   @donation.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.

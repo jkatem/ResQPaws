@@ -1,3 +1,4 @@
 class OrganizationSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :name, :description
+  has_many :dogs
 end

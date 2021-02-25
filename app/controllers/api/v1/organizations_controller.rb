@@ -4,7 +4,6 @@ class Api::V1::OrganizationsController < ApplicationController
   # GET /organizations
   def index
     @organizations = Organization.all
-
     render json: @organizations
   end
 
@@ -14,29 +13,29 @@ class Api::V1::OrganizationsController < ApplicationController
   end
 
   # POST /organizations
-  def create
-    @organization = Organization.new(organization_params)
+  # def create
+  #   @organization = Organization.new(organization_params)
 
-    if @organization.save
-      render json: @organization, status: :created, location: @organization
-    else
-      render json: @organization.errors, status: :unprocessable_entity
-    end
-  end
+  #   if @organization.save
+  #     render json: @organization, status: :created, location: @organization
+  #   else
+  #     render json: @organization.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # PATCH/PUT /organizations/1
-  def update
-    if @organization.update(organization_params)
-      render json: @organization
-    else
-      render json: @organization.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @organization.update(organization_params)
+  #     render json: @organization
+  #   else
+  #     render json: @organization.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /organizations/1
-  def destroy
-    @organization.destroy
-  end
+  # def destroy
+  #   @organization.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
